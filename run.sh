@@ -1,5 +1,6 @@
 #!/bin/bash
-function run_simulator {
+
+run_simulator () {
     sed -i.bak 's/=/ = /g' params_$1
     mkdir OUT_$1
     run_fred -p params_$1 -d OUT_$1
