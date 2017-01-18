@@ -1,7 +1,7 @@
 #!/bin/bash
 
 run_simulator () {
-    sed -i.bak 's/=/ = /g' $1
+    sed -i.bak 's/,/ = /g' $1
     mkdir OUT_$1
     run_fred -p $1 -d OUT_$1
     sed -i.bak 's/ /,/g' OUT_$1/out1.txt
