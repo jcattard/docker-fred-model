@@ -1,4 +1,4 @@
-FROM jcattard:docker-fred-simulator:latest
+FROM jcattard/docker-fred-simulator:latest
 MAINTAINER jcattard
 
 #Running
