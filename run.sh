@@ -5,9 +5,8 @@ run_simulator () {
     mkdir OUT_$1
     run_fred -p $1 -d OUT_$1
     sed -i.bak 's/ /,/g' OUT_$1/out1.txt
-    python filter.py OUT_$1/out1.txt OUT_$1/y0.csv
-    dos2unix OUT_$1/y0.csv &> /dev/null
-    cp OUT_$1/y0.csv $2
+    python filter.py OUT_$1/out1.txt $2
+    dos2unix $2 &> /dev/null
     rm $1.*
     rm -rf OUT_$1
 }
